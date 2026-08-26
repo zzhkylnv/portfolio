@@ -1,21 +1,14 @@
 <template>
   <main class="relative min-h-screen w-full bg-[#040814] text-slate-100 overflow-x-hidden font-sans">
-    
-    <!-- Latar Belakang Gradien Global -->
     <div
       class="pointer-events-none fixed inset-0 -z-10"
       style="background: radial-gradient(130% 100% at 10% 15%, #0f244a 0%, #071226 40%, #040814 85%);"
     />
 
-    <!-- Navbar Transparan -->
+    <!-- Navbar  -->
 <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
-  <!-- 1. Tambah padding samping nav dari px-3 jadi px-6 / px-8 -->
   <nav class="relative flex items-center rounded-full bg-slate-950/40 backdrop-blur-xl border border-cyan-500/20 px-6 sm:px-8 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-    
-    <!-- 2. Tambah jarak antar menu dari gap-1 jadi gap-3 atau gap-4 -->
     <ul class="relative flex items-center gap-3 sm:gap-4">
-      
-      <!-- Sliding Indicator (Sekarang Lebarnya Dinamis) -->
       <div
         class="absolute -top-[7px] left-0 pointer-events-none transition-all duration-300 ease-out z-20 flex flex-col items-center justify-center"
         :style="{
@@ -24,13 +17,9 @@
           opacity: indicatorStyle.opacity
         }"
       >
-        <!-- Garis Utama (Mengikuti Lebar Menu) -->
         <div class="h-[2px] w-full rounded-full bg-cyan-200 shadow-[0_0_10px_#22d3ee]" />
-        <!-- Glow Backdrop -->
         <div class="h-4 w-full -mt-1 rounded-full bg-cyan-400/40 blur-sm" />
       </div>
-
-      <!-- Menu Items -->
       <li
         v-for="(item, index) in navItems"
         :key="item.name"
@@ -54,8 +43,6 @@
     </ul>
   </nav>
 </header>
-
-    <!-- SECTION 1: HOME -->
     <section id="home" class="relative isolate min-h-screen w-full overflow-hidden flex items-center">
       <div class="pointer-events-none absolute -left-24 top-1/4 -z-10 h-[36rem] w-[36rem] animate-pulse rounded-full bg-cyan-600/15 blur-[130px]" />
 
@@ -75,7 +62,6 @@
       </div>
 
       <div class="relative mx-auto grid min-h-screen w-full max-w-[1700px] grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] pt-20 lg:pt-0 items-center">
-        <!-- Left Content -->
         <div class="relative z-10 flex flex-col justify-center px-6 py-24 sm:px-12 sm:py-28 lg:pl-28 lg:pr-12">
           <div class="animate-rise max-w-2xl">
             <p class="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-widest2 text-cyan-300/80">
@@ -107,7 +93,6 @@
           </div>
         </div>
 
-        <!-- Right Hologram -->
         <div class="relative hidden items-center justify-center lg:flex -translate-y-6" aria-hidden="true">
           <div class="pointer-events-none absolute h-[32rem] w-[32rem] animate-pulse rounded-full bg-cyan-500/15 blur-[120px]" />
           <img
@@ -119,17 +104,11 @@
       </div>
     </section>
 
-   <!-- SECTION 2: ABOUT & MINIMALIST TIMELINE -->
 <section id="about" class="relative isolate min-h-screen w-full overflow-hidden py-24 flex flex-col justify-center">
-  <!-- Glow ambient -->
   <div class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 -z-10 h-[32rem] w-[32rem] animate-pulse rounded-full bg-blue-600/15 blur-[140px]" />
 
   <div class="relative mx-auto w-full max-w-[1400px] px-6 sm:px-12 lg:px-16">
-    
-    <!-- GRID ATAS: Arc Reactor & Deskripsi Singkat -->
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-      
-      <!-- Left: Arc Reactor Image -->
       <div v-reveal.scale class="relative flex items-center justify-center min-h-[350px]">
         <div class="pointer-events-none absolute h-[20rem] w-[20rem] sm:h-[24rem] sm:w-[24rem] animate-pulse rounded-full bg-cyan-400/20 blur-[100px]" />
         
@@ -140,7 +119,6 @@
         />
       </div>
 
-      <!-- Right: About Me Text -->
       <div v-reveal.right class="relative z-10 flex flex-col justify-center">
         <p class="mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-widest2 text-cyan-400">
           <span class="h-px w-8 bg-cyan-400/50" />
@@ -159,19 +137,16 @@
 
     </div>
 
-   <!-- SUB-SECTION BAWAH: EDUCATION & EXPERIENCE -->
 <div class="mt-9 border-t border-cyan-500/15 pt-9">
   
   <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-14 items-start">
     
-    <!-- KOLOM KIRI: EDUCATION -->
     <div v-reveal.left>
       <h3 class="font-display text-lg sm:text-xl font-normal text-slate-100 italic mb-3">
         Education
       </h3>
 
       <div class="relative pl-6 border-l border-cyan-500/30">
-        <!-- Titik Bulat Presisi Menempel Pas Di Garis -->
         <div class="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
         
         <div class="space-y-0.5">
@@ -187,15 +162,12 @@
       </div>
     </div>
 
-    <!-- KOLOM KANAN: EXPERIENCE -->
     <div v-reveal.right>
       <h3 class="font-display text-lg sm:text-xl font-normal text-slate-100 italic mb-3">
         Experience
       </h3>
 
       <div class="relative pl-6 border-l border-cyan-500/30 space-y-6">
-        
-        <!-- ITEM 1: PROYEK SEKOLAH -->
         <div class="relative">
           <div class="absolute -left-[28.5px] top-1.5 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
           
@@ -211,7 +183,6 @@
           </div>
         </div>
 
-        <!-- ITEM 2: LOMBA CLEVIO AI GAME -->
         <div class="relative">
           <div class="absolute -left-[28.5px] top-1.5 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
           
@@ -227,7 +198,6 @@
           </div>
         </div>
 
-        <!-- ITEM 3: PKL -->
         <div class="relative">
           <div class="absolute -left-[28.5px] top-1.5 h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
           
@@ -256,12 +226,10 @@
 <!-- SECTION 3: PORTFOLIO -->
 <section id="portfolio" class="relative isolate min-h-screen w-full overflow-hidden py-20 flex flex-col justify-center">
   
-  <!-- Glow Ambient Background -->
   <div class="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -z-10 h-[30rem] w-[45rem] animate-pulse rounded-full bg-cyan-600/10 blur-[150px]" />
 
   <div class="relative mx-auto w-full max-w-[1300px] px-6 sm:px-12 lg:px-16">
     
-    <!-- HEADLINE SECTION -->
     <div v-reveal class="text-center max-w-2xl mx-auto mb-10">
       <p class="font-mono text-[10px] text-cyan-400 tracking-[0.25em] uppercase font-medium">
         MY CRAFTS & SKILLS
@@ -271,7 +239,6 @@
       </h2>
     </div>
 
-    <!-- TAB FILTER NAVIGATION (MINIMALIST GLOW LINES) -->
     <div v-reveal.fade class="flex justify-center mb-12 border-b border-slate-800/80 pb-3 max-w-xl mx-auto">
       <div class="relative flex gap-4 xs:gap-8 sm:gap-12">
         <!-- Sliding underline indicator -->
@@ -320,7 +287,6 @@
       </div>
     </div>
 
-    <!-- CONTENT SHOWCASE -->
     <div class="min-h-[350px]">
       <Transition name="tab-fade" mode="out-in">
         
@@ -461,7 +427,6 @@
     />
   </div>
 
-  <!-- Ambient Glow Backdrop -->
   <div class="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -z-10 h-[38rem] w-[55rem] rounded-full bg-cyan-500/10 blur-[170px]" :class="{ 'animate-pulse': !isStriking }" />
 
   <!-- SCREEN FLASH OVERLAY -->
@@ -473,10 +438,8 @@
  <!-- MAIN LAYOUT -->
 <div class="relative mx-auto w-full max-w-[1200px] px-6 sm:px-12">
 
-  <!-- Wrapper Utama dibuat Flex Column & Absolute Center untuk Isinya -->
   <div class="relative flex flex-col items-center justify-center min-h-[450px] sm:min-h-[550px] w-full" ref="strikeArea">
 
-    <!-- 1. TESSERACT -->
     <div 
       v-reveal.left
       class="absolute left-2 sm:left-8 bottom-2 sm:bottom-8 z-20 pointer-events-auto"
@@ -496,7 +459,6 @@
       </div>
     </div>
 
-    <!-- 2. THOR'S HAMMER -->
     <div v-reveal.right class="absolute right-8 sm:right-23 top-2 sm:top-4 z-20 pointer-events-auto" ref="hammerEl">
       <div class="relative group">
         <div
@@ -507,7 +469,6 @@
       </div>
     </div>
 
-    <!-- 3. SVG LIGHTNING -->
     <svg class="pointer-events-none absolute inset-0 w-full h-full z-40" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="softNebulaBlur" x="-100%" y="-100%" width="300%" height="300%">
@@ -557,7 +518,7 @@
       />
     </svg>
 
-    <!-- 4. CENTER TEXT & ICON BUTTONS (Clean Icon Only & Rapat) -->
+    <!-- 4. CENTER TEXT & ICON BUTTONS -->
 <div v-reveal.scale class="relative z-30 flex flex-col items-center justify-center text-center max-w-3xl px-4">
   <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight drop-shadow-2xl">
     Let's Build Something <br />
@@ -568,7 +529,6 @@
 
   <div class="mt-4 flex items-center justify-center gap-6 relative z-50">
     
-    <!-- Gmail Icon -->
     <a 
       href="https://mail.google.com/mail/?view=cm&fs=1&to=azizahkeylanova7@gmail.com" 
       target="_blank"
@@ -582,9 +542,8 @@
       </svg>
     </a>
 
-    <!-- WhatsApp Icon -->
     <a 
-      href="https://wa.me/6281200000000" 
+      href="https://wa.me/62895383210625" 
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"
@@ -603,14 +562,12 @@
 </div>
 
 
-  <!-- LOWER PART: FOOTER BOTTOM (COPYRIGHT & SOSMED) -->
+  <!-- FOOTER BOTTOM  -->
   <footer class="relative z-30 w-full border-t border-slate-800/80 pt-6 pb-2">
     <div class="mx-auto max-w-[1200px] px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="font-mono text-xs text-slate-500">
         © {{ new Date().getFullYear() }} Azizah. Built with Vue 3 & Tailwind.
       </p>
-
-      <!-- SOSMED ICONS -->
       <div class="flex items-center gap-3">
         <a href="https://github.com" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -633,7 +590,6 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted, onBeforeUnmount, watch } from 'vue'
 
-// --- 1. STAR ANIMATION DATA ---
 const stars = [
   { top: '10%', left: '18%', size: 2, delay: '0s' },
   { top: '20%', left: '80%', size: 3, delay: '0.6s' },
@@ -645,7 +601,6 @@ const stars = [
   { top: '68%', left: '6%', size: 3, delay: '2.6s' }
 ]
 
-// --- 2. NAVIGATION DATA & SCROLL OBSERVER ---
 const navItems = [
   { name: 'HOME', href: '#home', id: 'home' },
   { name: 'ABOUT', href: '#about', id: 'about' },
@@ -671,17 +626,14 @@ const setActive = (index: number) => {
   }
 }
 
-// --- NAV INDICATOR SLIDING LOGIC ---
 const navItemRefs = ref<HTMLElement[]>([])
 
-// 1. Tambahkan properti width pada ref indicatorStyle
 const indicatorStyle = ref({
   transform: 'translateX(0px)',
   width: '0px',
   opacity: 0
 })
 
-// 2. Perbarui logika hitung di updateIndicator
 const updateIndicator = () => {
   const activeItem = navItemRefs.value[activeIndex.value]
   if (activeItem) {
@@ -689,8 +641,8 @@ const updateIndicator = () => {
     const offsetWidth = activeItem.offsetWidth
 
     indicatorStyle.value = {
-      transform: `translateX(${offsetLeft}px)`, // Mulai dari sisi paling kiri menu aktif
-      width: `${offsetWidth}px`,                 // Lebar menyesuaikan penuh teks menu
+      transform: `translateX(${offsetLeft}px)`, 
+      width: `${offsetWidth}px`,                
       opacity: 1
     }
   }
@@ -709,7 +661,7 @@ onUnmounted(() => {
   window.removeEventListener('resize', updateIndicator)
 })
 
-// --- SECTION 3: PORTFOLIO DATA & STATE ---
+// --- SECTION 3:  ---
 const activeTab = ref<'projects' | 'certificates' | 'tech'>('projects')
 
 const projectsTabRef = ref<HTMLElement | null>(null)
@@ -761,14 +713,7 @@ const projects = [
     image: '',
     isComingSoon: false
   },
-  {
-    title: 'ShareCraft Platform',
-    category: 'School Project • Community',
-    description: 'Platform berbagi sumber daya dan karya kreatif bagi para kreator digital.',
-    tech: ['Vue.js', 'Tailwind CSS', 'REST API'],
-    image: '',
-    isComingSoon: false
-  },
+ 
   {
     title: 'BookLoop Library System',
     category: 'School Project • Web App',
@@ -837,7 +782,7 @@ const contactStars = [
 ]
 
 
-// SECTION 4: CANVAS PROCEDURAL LIGHTNING (Thor hammer -> Tesseract)
+// SECTION 4
 
 
 interface Point {
@@ -858,7 +803,6 @@ const pathD = ref('')
 const boltOpacity = ref(0)
 const sparkOpacity = ref(0)
 
-// state buat animasi "draw-on" (stroke-dashoffset), sama kaya loading screen di video
 const pathLength = ref(0)
 const dashOffset = ref(0)
 const transitionDuration = ref('0s')
@@ -882,13 +826,10 @@ function getRelativePoint(el: HTMLElement | null): Point {
   }
 }
 
-// Jalur zigzag TETAP (bukan fractal acak), persis gaya di video referensi:
-// beberapa titik belok yang jelas, sedikit variasi acak tiap sambaran biar ga persis sama terus
 function buildZigzagPath(start: Point, end: Point, segments = 6): string {
   const dx = end.x - start.x
   const dy = end.y - start.y
   const len = Math.sqrt(dx * dx + dy * dy) || 1
-  // vektor tegak lurus arah utama, buat nentuin arah zigzag kanan-kiri
   const perpX = -dy / len
   const perpY = dx / len
 
@@ -897,7 +838,6 @@ function buildZigzagPath(start: Point, end: Point, segments = 6): string {
     const t = i / segments
     const baseX = start.x + dx * t
     const baseY = start.y + dy * t
-    // amplitudo zigzag mengecil di dekat ujung, biar nyambung rapi ke hammer & tesseract
     const amp = (len / segments) * 0.45 * (i % 2 === 0 ? 1 : -1)
     const jitter = (Math.random() - 0.5) * 10
     points.push({
@@ -924,13 +864,11 @@ async function fireStrike() {
   const total = nebulaPathEl.value?.getTotalLength() ?? 400
   pathLength.value = total
 
-  // reset instan tanpa transisi, biar mulai dari "belum kegambar"
   transitionDuration.value = '0s'
   dashOffset.value = total
 
   await nextTick()
 
-  // tahap 1: "gambar" jalur petir dari hammer ke tesseract (kaya progress bar loading)
   stepTimeoutIds.push(
     setTimeout(() => {
       transitionDuration.value = '0.55s'
@@ -939,10 +877,8 @@ async function fireStrike() {
     }, 30)
   )
 
-  // tahap 2: tahan sebentar biar keliatan jelas
   stepTimeoutIds.push(
     setTimeout(() => {
-      // sedikit kedip pas nyampe ujung (real lightning ga langsung padam mulus)
       boltOpacity.value = 0.4
     }, 620)
   )
@@ -952,7 +888,6 @@ async function fireStrike() {
     }, 680)
   )
 
-  // tahap 3: fade out pelan-pelan
   stepTimeoutIds.push(
     setTimeout(() => {
       transitionDuration.value = '0.6s'
@@ -961,7 +896,6 @@ async function fireStrike() {
     }, 950)
   )
 
-  // tahap 4: selesai, jadwalin sambaran berikutnya
   stepTimeoutIds.push(
     setTimeout(() => {
       isStriking.value = false
@@ -971,13 +905,11 @@ async function fireStrike() {
 }
 
 function scheduleNextStrike() {
-  // interval acak antar sambaran biar berasa natural, bukan robotik
   const delay = 2500 + Math.random() * 3500
   strikeTimeoutId = setTimeout(fireStrike, delay)
 }
 
 onMounted(() => {
-  // --- scroll observer untuk nav ---
   let isMounted = false
   setTimeout(() => {
     isMounted = true
@@ -1000,10 +932,8 @@ onMounted(() => {
   )
   sections.forEach((section) => observer?.observe(section))
 
-  // --- setup petir SVG draw-on ---
   scheduleNextStrike()
 
-  // --- setup sliding indicators ---
   window.addEventListener('resize', handleResize)
   nextTick(() => {
     updateIndicator()
