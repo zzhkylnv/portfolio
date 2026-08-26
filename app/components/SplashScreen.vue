@@ -28,7 +28,6 @@
         <div class="status-text" :key="statusMessage">{{ statusMessage }}</div>
       </Transition>
 
-      <div class="skip-hint">klik untuk lewati</div>
       <div class="flash" :class="{ go: isFlashing }"></div>
     </div>
   </Transition>
@@ -51,7 +50,7 @@ const isFlashing = ref(false)
 const finished = ref(false)
 
 const messages = [
-  'a Genius',
+  'not a Genius',
   'Billionaire',
   'Playgirl',
   'Philanthropist',

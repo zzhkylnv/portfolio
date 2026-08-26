@@ -526,9 +526,7 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
       title="Kirim Email via Gmail"
       class="text-slate-400 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110 drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.8)] p-2"
     >
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052C21.69 2.279 24 3.434 24 5.457z"/>
-      </svg>
+      <i class="fa-solid fa-envelope text-3xl"></i>
     </a>
 
     <a 
@@ -539,9 +537,7 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
       title="Chat via WhatsApp"
       class="text-slate-400 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110 drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.8)] p-2"
     >
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-      </svg>
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
   </div>
@@ -555,7 +551,7 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
   <footer class="relative z-30 w-full border-t border-slate-800/80 pt-6 pb-2">
     <div class="mx-auto max-w-[1200px] px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="font-mono text-xs text-slate-500">
-        © {{ new Date().getFullYear() }} Azizah. 
+        © {{ new Date().getFullYear() }} keylastark. 
       </p>
       <div class="flex items-center gap-3">
         <a href="https://github.com" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
@@ -694,12 +690,6 @@ const handleResize = () => {
 }
 
 const projects = [
-  {
-    title: 'Sushi Store Web App',
-    tech: ['HTML/CSS', 'JavaScript', 'Tailwind CSS'],
-    image: '',
-    isComingSoon: false
-  },
  
   {
     title: 'BookLoop Library System',
@@ -709,17 +699,31 @@ const projects = [
     isComingSoon: false
   },
   {
-    title: 'Graduation Status Checker',
-    category: 'Mobile App • Flutter',
-    tech: ['Flutter', 'Dart', 'UI/UX'],
-    image: '',
-    isComingSoon: false
-  },
-  {
     title: 'Warisan Ayah (Detective Game)',
     category: 'Game Dev • Interactive Story',
-    tech: ['Game Engine', 'Logic Building', 'Storytelling'],
+    tech: ['HTML', 'CSS', 'JAVASRIPT'],
     image: '/warisan.jpeg',
+    isComingSoon: false
+  },
+   {
+    title: 'Van Aroma Visitor',
+    category: 'Visitor management system for PT Van Aroma.',
+    tech: ['Laravel', 'Docker', ],
+    image: '/visitor.jpeg',
+    isComingSoon: false
+  },
+   {
+    title: 'Van Aroma Security',
+    category: 'Internal security system for Van Aroma operational needs.',
+    tech: ['Laravel', 'Docker', 'Nuxt'],
+    image: '/vasec.jpeg',
+    isComingSoon: false
+  },
+   {
+    title: 'Van Aroma Job Portal',
+    category: 'Internal job portal for PT. Van Aroma.',
+    tech: ['Laravel', 'Docker', 'Nuxt'],
+    image: '/career.jpeg',
     isComingSoon: false
   }
 ]
