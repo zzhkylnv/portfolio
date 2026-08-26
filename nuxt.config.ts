@@ -9,9 +9,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Azizah Keylanova Gunawan',
+      title: 'Portofolio',
       meta: [
-        { name: 'description', content: 'Personal page of Azizah Keylanova Gunawan.' },
+        { name: 'description', content: 'Personal page .' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       link: [

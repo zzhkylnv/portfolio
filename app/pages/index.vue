@@ -131,7 +131,10 @@
         </h2>
 
         <p class="mt-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-          Saya seorang siswi SMK Jurusan PPLG yang berfokus pada rekayasa antarmuka web dan desain kreatif. Dari mengeksekusi tugas berbasis proyek di sekolah hingga menangani proyek nyata di tempat PKL, saya selalu mengutamakan kerapihan kode dan keindahan visual.
+I'm a Junior Developer and PPLG student with a growing interest in web development. I'm currently learning, experimenting, and building projects to improve my skills in both frontend and backend development.
+
+I may still be at the beginning of my journey, but I'm always curious to learn something new, solve problems, and turn ideas into real projects.
+
         </p>
       </div>
 
@@ -154,9 +157,9 @@
             SMK Negeri 1 Gunungputri
           </p>
           <h4 class="text-sm font-semibold text-slate-100">Pengembangan Perangkat Lunak & Gim (PPLG)</h4>
-          <p class="font-mono text-[10px] text-slate-400">2024 — Sekarang</p>
+          <p class="font-mono text-[10px] text-slate-400">2024 — Present</p>
           <p class="text-xs text-slate-400 leading-relaxed pt-1 max-w-sm">
-            Mendalami fondasi rekayasa perangkat lunak, logika pemrograman terstruktur, arsitektur antarmuka web, serta dasar-dasar pengembangan aplikasi seluler.
+            Delving into the foundations of software engineering, structured programming logic, web interface architecture, and the basics of mobile application development.
           </p>
         </div>
       </div>
@@ -177,9 +180,7 @@
             </p>
             <h4 class="text-sm font-semibold text-slate-100">Full-Stack & Mobile Exploration Developer</h4>
             <p class="font-mono text-[10px] text-slate-400">Project-Based Learning (SMK)</p>
-            <p class="text-xs text-slate-400 leading-relaxed pt-1 max-w-xl">
-              Mengembangkan berbagai proyek aplikasi secara bertahap—dimulai dari membangun antarmuka web statis dengan <strong class="text-slate-200 font-medium">HTML & CSS</strong>, merancang aplikasi berbasis web dengan framework <strong class="text-slate-200 font-medium">Laravel & Bootstrap</strong>, hingga mengeksplorasi pengembangan aplikasi *cross-platform* menggunakan <strong class="text-slate-200 font-medium">Flutter</strong>.
-            </p>
+           
           </div>
         </div>
 
@@ -192,9 +193,7 @@
             </p>
             <h4 class="text-sm font-semibold text-slate-100">AI-Powered Game Creator & Digital Illustrator</h4>
             <p class="font-mono text-[10px] text-slate-400">National AI Game Competition</p>
-            <p class="text-xs text-slate-400 leading-relaxed pt-1 max-w-xl">
-              Berkompetisi dalam ajang perancangan game berbasis AI. Berperan mengintegrasikan <strong class="text-slate-200 font-medium">alat bantu Artificial Intelligence (AI)</strong> untuk mengeksekusi ide dan mekanisme permainan, serta merancang aset visual dan seni digital (<strong class="text-slate-200 font-medium">digital art</strong>) secara terstruktur.
-            </p>
+            
           </div>
         </div>
 
@@ -205,11 +204,9 @@
             <p class="font-mono text-[10px] uppercase tracking-widest text-cyan-400 font-medium">
               Junior Frontend Developer
             </p>
-            <h4 class="text-sm font-semibold text-slate-100">Praktik Kerja Lapangan (PKL Intern)</h4>
-            <p class="font-mono text-[10px] text-slate-400">Sekarang / Ongoing</p>
-            <p class="text-xs text-slate-400 leading-relaxed pt-1 max-w-xl">
-              Terjun langsung ke lingkungan kerja profesional, berkolaborasi dalam alur kerja industri, dan dipercaya mengeksekusi <strong class="text-slate-200 font-medium">3 proyek website nyata</strong> dengan fokus pada kerapihan antarmuka dan pengalaman pengguna (*user experience*).
-            </p>
+            <h4 class="text-sm font-semibold text-slate-100">Internship</h4>
+            <p class="font-mono text-[10px] text-slate-400">Present</p>
+            
           </div>
         </div>
 
@@ -307,9 +304,6 @@
               <h3 class="text-base font-semibold text-slate-200">
                 {{ item.title }}
               </h3>
-              <p class="text-xs text-slate-500 mt-2 max-w-[240px]">
-                {{ item.description }}
-              </p>
             </div>
           </template>
 
@@ -326,7 +320,6 @@
           <div class="absolute inset-0 bg-[#040814]/95 backdrop-blur-sm p-5 sm:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
             <span class="font-mono text-[9px] text-cyan-400 tracking-widest uppercase mb-1">{{ item.category }}</span>
             <h3 class="text-base font-semibold text-slate-100">{{ item.title }}</h3>
-            <p class="text-xs text-slate-300 leading-relaxed mt-2 line-clamp-3">{{ item.description }}</p>
             <div class="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
               <span v-for="(t, i) in item.tech" :key="i" class="font-mono text-[9px] text-cyan-300 bg-cyan-950/60 border border-cyan-800/50 px-2 py-0.5 rounded-full">
                 {{ t }}
@@ -344,17 +337,13 @@
           v-reveal="index * 100"
           class="group relative h-60 w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer shadow-lg flex flex-col justify-center items-center"
         >
-          <!-- Jika Status Coming Soon -->
           <template v-if="cert.isComingSoon">
             <div class="absolute inset-0 bg-[#071124] flex flex-col items-center justify-center p-5 sm:p-6 text-center border border-dashed border-slate-800">
-              <span class="font-mono text-[10px] text-cyan-500/60 tracking-[0.3em] uppercase mb-2">
-                [ SLOT AVAILABLE ]
-              </span>
               <h3 class="text-sm font-semibold text-slate-400 tracking-wider">
                 COMING SOON
               </h3>
               <p class="text-[11px] text-slate-600 mt-1">
-                Sertifikat berikutnya segera hadir
+                The next certificate is coming soon.
               </p>
             </div>
           </template>
@@ -566,7 +555,7 @@
   <footer class="relative z-30 w-full border-t border-slate-800/80 pt-6 pb-2">
     <div class="mx-auto max-w-[1200px] px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="font-mono text-xs text-slate-500">
-        © {{ new Date().getFullYear() }} Azizah. Built with Vue 3 & Tailwind.
+        © {{ new Date().getFullYear() }} Azizah. 
       </p>
       <div class="flex items-center gap-3">
         <a href="https://github.com" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
@@ -707,8 +696,6 @@ const handleResize = () => {
 const projects = [
   {
     title: 'Sushi Store Web App',
-    category: 'School Project • E-Commerce',
-    description: 'Website interaktif pemesanan dan katalog kuliner sushi dengan antarmuka yang modern.',
     tech: ['HTML/CSS', 'JavaScript', 'Tailwind CSS'],
     image: '',
     isComingSoon: false
@@ -717,15 +704,13 @@ const projects = [
   {
     title: 'BookLoop Library System',
     category: 'School Project • Web App',
-    description: 'Sistem informasi perpustakaan digital berbasis web untuk manajemen peminjaman buku.',
     tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-    image: '',
+    image: '/bookloop.png',
     isComingSoon: false
   },
   {
     title: 'Graduation Status Checker',
     category: 'Mobile App • Flutter',
-    description: 'Aplikasi seluler cross-platform untuk mengecek status kelulusan secara cepat.',
     tech: ['Flutter', 'Dart', 'UI/UX'],
     image: '',
     isComingSoon: false
@@ -733,9 +718,8 @@ const projects = [
   {
     title: 'Warisan Ayah (Detective Game)',
     category: 'Game Dev • Interactive Story',
-    description: 'Game investigasi kasus korupsi ayah oleh Rka. Melatih kejujuran pemain: menghabiskan harta warisan atau memilih jalan lurus melapor.',
     tech: ['Game Engine', 'Logic Building', 'Storytelling'],
-    image: '',
+    image: '/warisan.jpeg',
     isComingSoon: false
   }
 ]
@@ -746,7 +730,6 @@ const certificates = [
     issuer: 'Clevio Coder Camp',
     year: '2025',
     category: 'Game Design & AI',
-    description: 'Sertifikat apresiasi partisipasi kompetisi nasional perancangan game berbasis AI dan digital art.',
     image: '/clevio.png',
     isComingSoon: false
   },
