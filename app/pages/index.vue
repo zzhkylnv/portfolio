@@ -447,6 +447,7 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
         />
       </div>
     </div>
+  
 
     <div v-reveal.right class="absolute right-8 sm:right-23 top-2 sm:top-4 z-20 pointer-events-auto" ref="hammerEl">
       <div class="relative group">
@@ -506,69 +507,70 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
         :opacity="boltOpacity"
       />
     </svg>
+  
 
-    <!-- 4. CENTER TEXT & ICON BUTTONS -->
-<div v-reveal.scale class="relative z-30 flex flex-col items-center justify-center text-center max-w-3xl px-4">
-  <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight drop-shadow-2xl">
-    Let's Build Something <br />
-    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-500 italic">
-      Worthy & Powerful.
-    </span>
-  </h2>
+  <!-- CENTER TEXT & EMAIL LINK -->
+        <div v-reveal.scale class="relative z-30 flex flex-col items-center justify-center text-center max-w-3xl px-4 my-auto">
+          <h2 class="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight drop-shadow-2xl">
+            Let's Build Something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-500 italic">
+              Worthy & Powerful.
+            </span>
+          </h2>
 
-  <div class="mt-4 flex items-center justify-center gap-6 relative z-50">
-    
-    <a 
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=azizahkeylanova7@gmail.com" 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Send Email via Gmail"
-      title="Kirim Email via Gmail"
-      class="text-slate-400 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110 drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.8)] p-2"
-    >
-      <i class="fa-solid fa-envelope text-3xl"></i>
-    </a>
+          <!-- Email Link Lebih Kecil (text-sm sm:text-base) -->
+          <div class="mt-4 relative z-50">
+            <a 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=azizahkeylanova7@gmail.com" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Send Email via Gmail"
+              title="Kirim Email via Gmail"
+              class="font-display text-sm sm:text-base font-normal tracking-wide text-slate-300 hover:text-cyan-300 transition-colors duration-300"
+            >
+              azizahkeylanova7@gmail.com
+            </a>
+          </div>
+        </div>
 
-    <a 
-      href="https://wa.me/62895383210625" 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat via WhatsApp"
-      title="Chat via WhatsApp"
-      class="text-slate-400 hover:text-cyan-300 transition-all duration-300 transform hover:scale-110 drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.8)] p-2"
-    >
-      <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-
-  </div>
-</div>
-
-  </div>
-</div>
-
-
-  <!-- FOOTER BOTTOM  -->
-  <footer class="relative z-30 w-full border-t border-slate-800/80 pt-6 pb-2">
-    <div class="mx-auto max-w-[1200px] px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-mono text-xs text-slate-500">
-        © {{ new Date().getFullYear() }} keylastark. 
-      </p>
-      <div class="flex items-center gap-3">
-        <a href="https://github.com" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        </a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/zizahkeylnv" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-width="2"/><path stroke-width="2" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>
-        </a>
       </div>
-    </div>
-  </footer>
 
+      <!-- FOOTER BOTTOM -->
+      <footer class="relative z-30 w-full border-t border-slate-800/80 py-4 mt-auto">
+        <div class="mx-auto max-w-[1200px] px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="font-mono text-xs text-slate-500">
+            © {{ new Date().getFullYear() }} keylastark. 
+          </p>
+          
+          <div class="flex items-center gap-3">
+            <a 
+              href="https://wa.me/62895383210625" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="WhatsApp" 
+              title="Chat via WhatsApp"
+              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
 
-</section>
+            <a href="https://github.com/zzhkylnv" target="_blank" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+            </a>
+
+            <a href="https://www.instagram.com/zizahkeylnv" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-300 hover:border-cyan-400/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-width="2"/><path stroke-width="2" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+</div>
+
+    </section>
   </main>
 </template>
 
