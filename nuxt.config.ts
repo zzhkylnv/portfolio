@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Portofolio',
+      title: 'Portfolio',
       meta: [
         { name: 'description', content: 'Personal page .' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }

@@ -289,45 +289,49 @@ I may still be at the beginning of my journey, but I'm always curious to learn s
         
         <!-- 1. PROJECTS GRID -->
         <div v-if="activeTab === 'projects'" key="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
-          v-for="(item, index) in projects"
-          :key="index"
-          v-reveal="index * 100"
-          class="group relative h-64 w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer shadow-lg flex flex-col justify-center items-center"
-        >
-          <!-- Jika Gambar Kosong -->
-          <template v-if="!item.image">
-            <div class="absolute inset-0 bg-[#071124] flex flex-col items-center justify-center p-5 sm:p-6 text-center">
-              <span class="font-mono text-xs text-cyan-400 tracking-[0.3em] uppercase mb-2 animate-pulse">
-                // COMING SOON
-              </span>
-              <h3 class="text-base font-semibold text-slate-200">
-                {{ item.title }}
-              </h3>
-            </div>
-          </template>
+          <component
+            :is="item.link ? 'a' : 'div'"
+            v-for="(item, index) in projects"
+            :key="index"
+            v-reveal="index * 100"
+            :href="item.link || undefined"
+            :target="item.link ? '_blank' : undefined"
+            :rel="item.link ? 'noopener noreferrer' : undefined"
+            class="group relative h-64 w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer shadow-lg flex flex-col justify-center items-center"
+          >
+            <!-- Jika Gambar Kosong -->
+            <template v-if="!item.image">
+              <div class="absolute inset-0 bg-[#071124] flex flex-col items-center justify-center p-5 sm:p-6 text-center">
+                <span class="font-mono text-xs text-cyan-400 tracking-[0.3em] uppercase mb-2 animate-pulse">
+                  // COMING SOON
+                </span>
+                <h3 class="text-base font-semibold text-slate-200">
+                  {{ item.title }}
+                </h3>
+              </div>
+            </template>
 
-          <!-- Jika Ada Gambar -->
-          <template v-else>
-            <img :src="item.image" :alt="item.title" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300" />
-            <div class="absolute bottom-3 left-4 group-hover:opacity-0 transition-opacity duration-300">
-              <span class="font-mono text-[10px] text-cyan-300 tracking-wider uppercase block">{{ item.title }}</span>
-            </div>
-          </template>
+            <!-- Jika Ada Gambar -->
+            <template v-else>
+              <img :src="item.image" :alt="item.title" class="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300" />
+              <div class="absolute bottom-3 left-4 group-hover:opacity-0 transition-opacity duration-300">
+                <span class="font-mono text-[10px] text-cyan-300 tracking-wider uppercase block">{{ item.title }}</span>
+              </div>
+            </template>
 
-          <!-- Hover Overlay -->
-          <div class="absolute inset-0 bg-[#040814]/95 backdrop-blur-sm p-5 sm:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-            <span class="font-mono text-[9px] text-cyan-400 tracking-widest uppercase mb-1">{{ item.category }}</span>
-            <h3 class="text-base font-semibold text-slate-100">{{ item.title }}</h3>
-            <div class="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
-              <span v-for="(t, i) in item.tech" :key="i" class="font-mono text-[9px] text-cyan-300 bg-cyan-950/60 border border-cyan-800/50 px-2 py-0.5 rounded-full">
-                {{ t }}
-              </span>
+            <!-- Hover Overlay -->
+            <div class="absolute inset-0 bg-[#040814]/95 backdrop-blur-sm p-5 sm:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <span class="font-mono text-[9px] text-cyan-400 tracking-widest uppercase mb-1">{{ item.category }}</span>
+              <h3 class="text-base font-semibold text-slate-100">{{ item.title }}</h3>
+              <div class="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
+                <span v-for="(t, i) in item.tech" :key="i" class="font-mono text-[9px] text-cyan-300 bg-cyan-950/60 border border-cyan-800/50 px-2 py-0.5 rounded-full">
+                  {{ t }}
+                </span>
+              </div>
             </div>
-          </div>
+          </component>
         </div>
-      </div>
 
       <!-- 2. CERTIFICATES GRID -->
       <div v-else-if="activeTab === 'certificates'" key="certificates" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -692,12 +696,12 @@ const handleResize = () => {
 }
 
 const projects = [
- 
   {
     title: 'BookLoop Library System',
     category: 'School Project • Web App',
     tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
     image: '/bookloop.png',
+    link: 'https://bookloop.keylastark.my.id',
     isComingSoon: false
   },
   {
@@ -705,23 +709,24 @@ const projects = [
     category: 'Game Dev • Interactive Story',
     tech: ['HTML', 'CSS', 'JAVASRIPT'],
     image: '/warisan.jpeg',
+    link: 'https://warisan-ayah.pages.dev/play',
     isComingSoon: false
   },
-   {
+  {
     title: 'Van Aroma Visitor',
     category: 'Visitor management system for PT Van Aroma.',
-    tech: ['Laravel', 'Docker', ],
+    tech: ['Laravel', 'Docker'],
     image: '/visitor.jpeg',
     isComingSoon: false
   },
-   {
+  {
     title: 'Van Aroma Security',
     category: 'Internal security system for Van Aroma operational needs.',
     tech: ['Laravel', 'Docker', 'Nuxt'],
     image: '/vasec.jpeg',
     isComingSoon: false
   },
-   {
+  {
     title: 'Van Aroma Job Portal',
     category: 'Internal job portal for PT. Van Aroma.',
     tech: ['Laravel', 'Docker', 'Nuxt'],
@@ -759,6 +764,16 @@ const certificates = [
   }
 ]
 
+const techStack = [
+  { name: 'Laravel', icon: '🅻' },
+  { name: 'PHP', icon: '🐘' },
+  { name: 'MySQL', icon: '🐬' },
+  { name: 'Nuxt', icon: '▲' },
+  { name: 'Vue', icon: '🟢' },
+  { name: 'Docker', icon: '🐳' },
+  { name: 'Bootstrap', icon: '🅱️' },
+  { name: 'JavaScript', icon: '🟨' }
+]
 
 const contactStars = [
   { top: '15%', left: '10%', size: 2, delay: '0.2s' },
